@@ -42,9 +42,9 @@ function Homepage() {
         </Button>
       </div>
       <Row>
-        {search.map((song) => (
-          <Col md={3} className="my-3">
-            <Link to={`/:${song.artist.id}`}>
+        {search.map((song, i) => (
+          <Col md={3} className="my-3" key={i}>
+            <Link to={"" + song.album.id}>
               <DisplayCard song={song} />
             </Link>
           </Col>
